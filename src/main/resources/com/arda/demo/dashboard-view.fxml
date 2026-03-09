@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootPane" prefHeight="516.0" prefWidth="650.0" styleClass="root-pane" stylesheets="@/app.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arda.demo.DashboardController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="560.0" spacing="20">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <Label alignment="CENTER" contentDisplay="TOP" prefHeight="50.0" prefWidth="242.0" styleClass="h1" text="Pomodoro">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
+         <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="TOP" layoutX="230.0" layoutY="185.0" prefHeight="50.0" prefWidth="480.0" styleClass="timer" text="00:00">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <ProgressBar fx:id="progressBar" prefHeight="15.0" prefWidth="200.0" progress="0.0" />
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0" spacing="10.0">
+            <children>
+               <Button fx:id="startBtn" mnemonicParsing="false" onAction="#onStart" prefHeight="80.0" prefWidth="160.0" styleClass="btn" text="START" textFill="RED" />
+               <Button fx:id="pauseBtn" lineSpacing="10.0" mnemonicParsing="false" onAction="#onPause" prefHeight="80.0" prefWidth="160.0" styleClass="btn" text="PAUSE" />
+               <Button fx:id="restartBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onRestart" prefHeight="80.0" prefWidth="160.0" styleClass="btn" text="RESTART" textFill="#0400ff" />
+            </children>
+         </HBox>
+         <ChoiceBox fx:id="modeChoice" prefHeight="40.0" prefWidth="210.0" styleClass="choice" />
+         <Label fx:id="cycleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="160.0" styleClass="muted" text="Cycle: 0/4" />
+      </VBox>
+   </center>
+   <right>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="49.0" prefWidth="200.0" styleClass="h2" text="Tasks" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="taskField" alignment="CENTER" maxWidth="1.0E11" prefHeight="120.0" prefWidth="200.0" styleClass="btn" text="Enter the task name here.">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <TextField fx:id="countField" alignment="CENTER" prefHeight="64.0" prefWidth="300.0" styleClass="btn" text="Enter the pomodoro count(e.g.1).">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <HBox prefHeight="65.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addTaskBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onAddTask" prefHeight="30.0" prefWidth="300.0" styleClass="btn" text="Add" />
+               </children>
+            </HBox>
+            <ListView fx:id="taskList" prefHeight="245.0" prefWidth="300.0" styleClass="task-list" />
+            <Button fx:id="deleteTaskBtn" mnemonicParsing="false" onAction="#onDeleteTask" prefHeight="40.0" prefWidth="300.0" styleClass="btn" text="Delete!" />
+         </children>
+      </VBox>
+   </right>
+
+</BorderPane>

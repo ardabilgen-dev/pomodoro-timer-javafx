@@ -1,0 +1,128 @@
+.root-pane{
+    -fx-background-color: #1e1e1e;
+}
+
+.h1 {
+    -fx-font-size: 32px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #e6e6e6;
+}
+
+.h2 {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #e6e6e6;
+}
+
+.timer {
+    -fx-font-size: 48px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ff6b6b;
+    -fx-spacing: light;
+}
+
+.muted {
+    -fx-font-size: 22px;
+    -fx-text-fill: #e6e6e6;
+    -fx-opacity: 0.65;
+}
+
+.btn {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10 18 10 18;
+    -fx-background-radius: 10;
+}
+
+.btn:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.btn:disabled {
+    -fx-opacity: 0.45;
+}
+
+.taskField {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #ffffff;
+}
+
+.choice {
+    -fx-background-color: rgba(255, 255, 255, 0.73);
+    -fx-mark-color: rgba(255, 255, 255, 0.19);
+    -fx-text-fill: rgba(255, 255, 255, 0.42);
+}
+
+.progress-bar {
+    -fx-accent: #5bd36d;
+}
+
+.pomodoro-mode .timer {
+    -fx-text-fill: #ff6b6b;
+}
+
+.pomodoro-mode .progress-bar {
+    -fx-accent: #ff6b6b;
+}
+
+.break-mode .timer {
+    -fx-text-fill: #5bd36d;
+}
+
+.break-mode .progress-bar {
+    -fx-accent: #5bd36d;
+}
+
+.task-list {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+}
+
+.task-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10 14 10 14;
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 14px;
+
+    -fx-text-overrun: ellipsis;
+    -fx-wrap-text: false;
+}
+
+.task-list .list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-cursor: hand;
+}
+
+.task-list .list-cell:selected {
+    -fx-background-color: rgba(255, 107, 107, 0.18); /* pomodoro rengine yakın */
+    -fx-text-fill: #ffffff;
+}
+
+.task-list .list-cell:selected:focused {
+    -fx-background-insets: 0;
+}
+
+.task-list .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.task-list .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.task-list .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-background-radius: 6;
+}
+
+.task-list .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.45);
+}
+
+.task-list .increment-button,
+.task-list .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+
