@@ -1,25 +1,33 @@
 # Pomodoro Timer (JavaFX)
 
-A desktop Pomodoro timer application built with JavaFX to help users manage focused work sessions and task progress.
+A desktop Pomodoro timer application built with JavaFX, featuring task tracking and persistent storage using SQLite.
 
 ## Features
-- Pomodoro, short break, and long break modes
-- Task creation and deletion
-- Task progress tracking with remaining Pomodoro sessions
-- Automatic cycle tracking
-- SQLite-based local data persistence
-- Input validation with alert messages
+- Pomodoro timer (25 min work / 5 min break)
+- Task management system
+- SQLite database integration
+- Automatic task progress tracking
+- Custom UI with JavaFX and CSS
 
-## Technologies
+## Tech Stack
 - Java
 - JavaFX
 - SQLite
-- Gradle
+- JDBC
+
+## Screenshots
+(Add screenshots here if available)
+
+## What I Learned
+- JavaFX UI design and event handling
+- Database integration with JDBC
+- Structuring a desktop application using OOP principles
+- Managing application state and persistence
 
 ## How to Run
-1. Clone the repository
-2. Open the project in IntelliJ IDEA
-3. Build and run `HelloApplication.java`
+```bash
+./gradlew run
+```
 
 ## Notes
 Task data is stored locally using SQLite.
